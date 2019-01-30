@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="做人最紧要就係要开心，专业阴人,把欢乐建立在别人的痛苦之上">
+  <meta name="author" content="wongjyusing">
+  <!-- <meta name="keywords" content="{% block keywords %}{% end %}"> -->
+  <link rel="stylesheet" href="{{ static_url("css/bootstrap.min.css") }}">
+  <link rel="stylesheet" href="{{ static_url("css/fruity.css") }}">
+  <link rel="stylesheet" href="{{ static_url("css/master.css") }}">
+
+  <title>{% block title %}{% end %}</title>
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ reverse_url('home')  }}">金庸小说</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ reverse_url('home')  }}">首页 <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                小说版本
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ reverse_url('version',1) }}">修订版</a>
+                <a class="dropdown-item" href="{{ reverse_url('version',2) }}">新修版</a>
+                <a class="dropdown-item" href="{{ reverse_url('version',3) }}">旧版</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    {% block content %}{% end %}
+    <footer class="site-footer">
+      <div>
+        <p>Copyright © 2019 <a href="https://github.com/wongjyusing">Sing</a>, Powered by <a href="https://www.tornadoweb.org/en/stable">Tornado</a>.</p>
+        <p>
+          <b>切勿将本网站的数据库用于商用</b>
+        </p>
+        <p>源数据已经被<a href="https://github.com/wongjyusing">
+            <b>Sing</b>
+          </a>破坏了（很多错别字），仅作为爬虫练习项目</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="{{ static_url("js/jquery.slim.min.js") }}"></script>
+  <script type="text/javascript" src="{{ static_url("js/popper.min.js") }}"></script>
+  <script type="text/javascript" src="{{ static_url("js/bootstrap.min.js") }}"></script>
+</body>
+
+</html>

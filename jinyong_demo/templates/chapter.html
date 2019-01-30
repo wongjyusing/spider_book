@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% end %}
+
+{% block content %}
+<div class="data-my-content">
+
+  <div class="version-content">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">书名</th>
+          <th scope="col">年份</th>
+          <th scope="col">出版社</th>
+          <th scope="col">版本</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">{{ book_data['book_name'] }}</th>
+          <td>{{ book_data['book_time'] }}</td>
+          <td>{{ book_data['book_info'] }}</td>
+          <td>{{ book_data['version_name'] }}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    {% for page in context %}
+    <li><a href="{{ reverse_url('detail',book_data['book_slug'],page) }}">{{ context[page] }}</a></li>
+    {% end %}
+  </ul>
+</div>
+{% end %}

@@ -1,0 +1,59 @@
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">个人空间</div>
+    <table class="table table-striped">
+        <tbody>
+            {% for each in context['spacelinks'] %}
+            <tr>
+                <th scope="row">{{context['spacelinks'][each]['link_type']}}</th>
+                <td><a target="_blank" href="{{context['spacelinks'][each]['link']}}">{{context['spacelinks'][each]['name']}}</a></td>
+            </tr>
+            {% end %}
+        </tbody>
+    </table>
+</div><!--card-->
+
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">标签</div>
+    <table class="table table-striped">
+        <tbody>
+            {% for each in context['blog_all_tags'] %}
+            <tr>
+
+                <th scope="row"><a href="{{ reverse_url('tags',context['blog_all_tags'][each]['slug'])  }}">{{context['blog_all_tags'][each]['name']}}</a></th>
+
+            </tr>
+            {% end %}
+
+        </tbody>
+    </table>
+</div><!--card-->
+
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">推荐书籍</div>
+    <table class="table table-striped">
+        <tbody>
+            {% for each in context['booklinks'] %}
+            <tr>
+                <th scope="row"><a target="_blank" href="{{context['booklinks'][each]['link']}}">{{context['booklinks'][each]['name']}}</a></th>
+
+            </tr>
+        {% end %}
+
+        </tbody>
+    </table>
+</div><!--card-->
+
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">友情链接</div>
+    <table class="table table-striped">
+        <tbody>
+            {% for each in context['friendlinks'] %}
+            <tr>
+                <th scope="row"><a target="_blank" href="{{context['friendlinks'][each]['link']}}">{{context['friendlinks'][each]['name']}}</a></th>
+
+            </tr>
+        {% end %}
+
+        </tbody>
+    </table>
+</div><!--card-->

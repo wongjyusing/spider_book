@@ -1,0 +1,33 @@
+
+/* set content panding */
+
+.data-my-content {
+  padding-top: 20px;
+}
+
+.version-content {
+  padding-top: 20px;
+}
+
+.version-name font{
+  font-size: 14px;
+  color: #CF390D;
+  float: right;
+}
+
+.site-footer {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.chapter-name {
+  text-align: center;
+}
+
+.detail-content {
+  margin: 30px;
+}
+
+.detail-content p{
+  font-size: 30px;
+}
