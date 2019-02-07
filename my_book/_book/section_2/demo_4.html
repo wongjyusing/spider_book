@@ -1,0 +1,575 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>三层结构小说网站爬取框架 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="demo_3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../section_0/chapter_0.html">
+            
+                <a href="../section_0/chapter_0.html">
+            
+                    
+                    什么是爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../section_1/chapter_0.html">
+            
+                <a href="../section_1/chapter_0.html">
+            
+                    
+                    分析网页
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section_1/chapter_1.html">
+            
+                <a href="../section_1/chapter_1.html">
+            
+                    
+                    隐身窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section_1/chapter_2.html">
+            
+                <a href="../section_1/chapter_2.html">
+            
+                    
+                    网页源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../section_1/chapter_3.html">
+            
+                <a href="../section_1/chapter_3.html">
+            
+                    
+                    动态网页解析手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter_0.html">
+            
+                <a href="chapter_0.html">
+            
+                    
+                    学习方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter_1.html">
+            
+                <a href="chapter_1.html">
+            
+                    
+                    编写爬虫前的准备工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="demo_0.html">
+            
+                <a href="demo_0.html">
+            
+                    
+                    怎么写爬虫？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="demo_1.html">
+            
+                <a href="demo_1.html">
+            
+                    
+                    使用代码打开一个网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="demo_2.html">
+            
+                <a href="demo_2.html">
+            
+                    
+                    bs4傻瓜教学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="demo_3.html">
+            
+                <a href="demo_3.html">
+            
+                    
+                    函数化代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="demo_4.html">
+            
+                <a href="demo_4.html">
+            
+                    
+                    三层结构小说网站爬取框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >三层结构小说网站爬取框架</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E09;&#x5C42;&#x7ED3;&#x6784;&#x7684;&#x5C0F;&#x8BF4;&#x7F51;&#x7AD9;&#x722C;&#x53D6;&#x901A;&#x7528;&#x6846;&#x67B6;">&#x4E09;&#x5C42;&#x7ED3;&#x6784;&#x7684;&#x5C0F;&#x8BF4;&#x7F51;&#x7AD9;&#x722C;&#x53D6;&#x901A;&#x7528;&#x6846;&#x67B6;</h2>
+<p>&#x5728;&#x5173;&#x952E;&#x70B9;&#x6211;&#x4F1A;&#x5199;&#x4E0A;&#x8BF4;&#x660E;&#xFF0C;&#x5927;&#x5BB6;&#x540E;&#x7EED;&#x9700;&#x8981;&#x7684;&#x662F; &#x7406;&#x89E3;&#x548C;&#x5199;&#x6CE8;&#x91CA;  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_response</span><span class="hljs-params">(url,encoding_type)</span>:</span>
+    header = {
+        <span class="hljs-string">&apos;user-agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&apos;</span>,
+    }
+    response = requests.get(url=url,headers=header)
+    response.encoding = encoding_type     
+    <span class="hljs-keyword">return</span> response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_name_and_link</span><span class="hljs-params">(base_url,urls,item_dict,analytic,item_name,item_slug_name)</span>:</span>
+    response = get_response(urls,encoding_type)
+    soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+    <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> soup.select(analytic):
+        item_dict[item_name] = each.text
+        item_dict[item_slug_name] = each[<span class="hljs-string">&apos;href&apos;</span>]
+        <span class="hljs-keyword">yield</span> item_dict
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_detail</span><span class="hljs-params">(item_dict,analytic)</span>:</span>
+    response = get_response(f<span class="hljs-string">&apos;{base_url}{item_dict[&quot;chapter_slug&quot;]}&apos;</span>,encoding_type)
+    soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+    content = soup.select(analytic)
+
+    book_name = item_dict[<span class="hljs-string">&apos;book_name&apos;</span>]
+    title = item_dict[<span class="hljs-string">&apos;chapter_name&apos;</span>]
+    <span class="hljs-keyword">with</span> open(f<span class="hljs-string">&apos;{book_name}.txt&apos;</span>,<span class="hljs-string">&apos;a&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)<span class="hljs-keyword">as</span> txt_file:
+    <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#xFF0C;&#x907F;&#x514D;&#x5199;&#x5165;&#x65F6;&#x4E71;&#x7801;</span>
+    <span class="hljs-comment"># &#x6BCF;&#x4E00;&#x6B21;&#x5199;&#x5165;&#x7AE0;&#x8282;&#x540D;&#x65F6;&#x8FDB;&#x884C;&#x6362;&#x884C;</span>
+        txt_file.write(<span class="hljs-string">&apos;\n&apos;</span>+title+<span class="hljs-string">&apos;\n&apos;</span>)
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> content:
+            txt_file.write(line.text + <span class="hljs-string">&apos;\n&apos;</span>)
+    print(f<span class="hljs-string">&apos;{ title } &#x5199;&#x5165;&#x5230;{ book_name }.txt &#x5B8C;&#x6210;&apos;</span>)
+
+<span class="hljs-comment"># &#x57FA;&#x7840;url &#x901A;&#x5E38;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x9047;&#x5230;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x7F51;&#x9875;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x57FA;&#x7840;url&#x8FDB;&#x884C;&#x62FC;&#x63A5;</span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x662F; &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84; &#x90A3;&#x5C31;&#x5199;&#x6210;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
+base_url = <span class="hljs-string">&apos;http://127.0.0.1:8000&apos;</span>
+
+<span class="hljs-comment"># &#x9700;&#x8981;&#x722C;&#x53D6;&#x7684;url</span>
+urls = <span class="hljs-string">&apos;http://127.0.0.1:8000&apos;</span>
+
+<span class="hljs-comment"># &#x7F51;&#x7AD9;&#x7F16;&#x7801;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x90FD;&#x662F;utf-8&#x6216;gbk&#x7F16;&#x7801;</span>
+encoding_type = <span class="hljs-string">&apos;utf-8&apos;</span>
+
+<span class="hljs-comment"># &#x4E66;&#x540D;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x7528;&#x5728;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E66;&#x540D;&#x548C;&#x7AE0;&#x8282;&#x5217;&#x8868;&#x7684;&#x7F51;&#x9875;&#x540E;&#x7F00;</span>
+book_analytic = <span class="hljs-string">&apos;th a&apos;</span>
+
+<span class="hljs-comment"># &#x7AE0;&#x8282;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+
+chapter_analytic = <span class="hljs-string">&apos;[href^=&quot;/detail/&quot;]&apos;</span>
+
+<span class="hljs-comment"># &#x8BE6;&#x60C5;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+detail_analytic = <span class="hljs-string">&apos;.detail-content p&apos;</span>    
+
+<span class="hljs-comment"># &#x4E3B;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    items = {}
+    book_list = get_name_and_link(base_url,urls,items,book_analytic,<span class="hljs-string">&apos;book_name&apos;</span>,<span class="hljs-string">&apos;book_slug&apos;</span>)
+    <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+        book_url = f<span class="hljs-string">&apos;{base_url}{each[&quot;book_slug&quot;]}&apos;</span>
+        chapter_dict = get_name_and_link(base_url,book_url,items,chapter_analytic,<span class="hljs-string">&apos;chapter_name&apos;</span>,<span class="hljs-string">&apos;chapter_slug&apos;</span>)
+        <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> chapter_dict:
+            get_detail(each,detail_analytic)
+main()
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x4F1A;&#x4FDD;&#x5B58;&#x6210;15&#x672C;&#x5C0F;&#x8BF4;&#xFF0C;&#x4E0D;&#x80FD;&#x6309;&#x7167;&#x7248;&#x672C;&#x540D;&#x8FDB;&#x884C;&#x5206;&#x76EE;&#x5F55;&#x6765;&#x4FDD;&#x5B58;&#x3002;<br>&#x539F;&#x56E0;&#x662F;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5230;&#x8DEF;&#x5F84;&#x5230;<code>get_detail</code>&#x51FD;&#x6570;&#x3002;<br>&#x5177;&#x4F53;&#x5982;&#x4F55;&#x7ED9;&#x5230;&#x5B83;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;<br>&#x6211;&#x7ED9;&#x51FA;&#x51E0;&#x4E2A;&#x601D;&#x8DEF;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x60F3;&#x529E;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;  </p>
+<p>1&#x3001; &#x5229;&#x7528;&#x5217;&#x8868;&#x5207;&#x7247;&#xFF0C;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x4E09;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x4ECE;&#x9996;&#x9875;&#x6362;&#x53D6;&#x5230;&#x7684;book_list&#x8FDB;&#x884C;&#x5207;&#x7247;&#x540E;&#xFF0C;&#x5728;get_detail&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x3002;<br>&#x91CD;&#x590D;&#x4E09;&#x6B21;&#x540E;&#xFF0C;&#x65B9;&#x53EF;&#x5B9E;&#x73B0;&#x6309;&#x7167;&#x7248;&#x672C;&#x6765;&#x4FDD;&#x5B58;&#x5C0F;&#x8BF4;&#x6587;&#x4EF6;&#x3002;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;<br>2&#x3001; &#x6539;&#x5199;get_name_and_link&#x51FD;&#x6570;&#x3002;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x83B7;&#x53D6;&#x7248;&#x672C;&#x540D;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x4F20;&#x53C2;&#x7ED9;get_detail&#x51FD;&#x6570;&#xFF0C;&#x8BA9;&#x5176;&#x5B9E;&#x73B0;&#x5206;&#x76EE;&#x5F55;&#x4FDD;&#x5B58;&#x5C0F;&#x8BF4;&#x6587;&#x4EF6;&#x3002;<br>3&#x3001; &#x4E0D;&#x4ECE;&#x9996;&#x9875;&#x5165;&#x624B;&#xFF0C;&#x4ECE;<strong>&#x6309;&#x7248;&#x672C;&#x5206;&#x7C7B;&#x7684;&#x4E66;&#x540D;&#x5217;&#x8868;</strong>&#x5F00;&#x59CB;&#x722C;&#x53D6;&#xFF08;&#x6709;&#x89C4;&#x5219;&#x7684;&#xFF0C;&#x5F88;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x8BD5;&#x8BD5;&#xFF09;<br>4&#x3001; &#x5229;&#x7528;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x8FC7;&#x7684;pandas&#x89E3;&#x6790;&#x6CD5;&#x8FDB;&#x884C;&#x5168;&#x7AD9;&#x722C;&#x53D6;&#x3002;&#xFF08;&#x5EFA;&#x8BAE;&#x6709;&#x722C;&#x866B;&#x57FA;&#x7840;&#x7684;&#x8BD5;&#x4E00;&#x8BD5;&#xFF09;<br>5&#x3001; &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#x7684;&#x5217;&#x8868;&#x6216;&#x8005;&#x5B57;&#x5178;&#xFF0C;&#x5229;&#x7528;&#x7D22;&#x5F15;&#x7684;&#x5F62;&#x5F0F;&#x5728;&#x6846;&#x67B6;&#x4E2D;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x76EE;&#x5F55;&#x548C;&#x4F20;&#x53C2;&#x7ED9;get_detail&#x51FD;&#x6570;&#x3002;<br>6&#x3001; &#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x5199;&#x51FA;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x6781;&#x529B;&#x63A8;&#x8350;&#xFF0C;&#x81EA;&#x5DF1;&#x7684;&#x624D;&#x662F;&#x6700;&#x597D;&#x7684;&#xFF09;<br>&#x2026;&#x2026;<br>&#x8FD8;&#x6709;&#x4E24;&#x4E09;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x81EA;&#x5DF1;&#x601D;&#x8003;&#x5427;&#x3002;  </p>
+<h2 id="&#x6846;&#x67B6;&#x7684;&#x4F7F;&#x7528;">&#x6846;&#x67B6;&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x7528;&#x6CD5;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x628A;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">base_url = <span class="hljs-string">&apos;http://127.0.0.1:8000&apos;</span>
+
+<span class="hljs-comment"># &#x9700;&#x8981;&#x722C;&#x53D6;&#x7684;url</span>
+urls = <span class="hljs-string">&apos;http://127.0.0.1:8000&apos;</span>
+
+<span class="hljs-comment"># &#x7F51;&#x7AD9;&#x7F16;&#x7801;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x90FD;&#x662F;utf-8&#x6216;gbk&#x7F16;&#x7801;</span>
+encoding_type = <span class="hljs-string">&apos;utf-8&apos;</span>
+
+<span class="hljs-comment"># &#x4E66;&#x540D;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x7528;&#x5728;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E66;&#x540D;&#x548C;&#x7AE0;&#x8282;&#x5217;&#x8868;&#x7684;&#x7F51;&#x9875;&#x540E;&#x7F00;</span>
+book_analytic = <span class="hljs-string">&apos;th a&apos;</span>
+
+<span class="hljs-comment"># &#x7AE0;&#x8282;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+
+chapter_analytic = <span class="hljs-string">&apos;[href^=&quot;/detail/&quot;]&apos;</span>
+
+<span class="hljs-comment"># &#x8BE6;&#x60C5;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+detail_analytic = <span class="hljs-string">&apos;.detail-content p&apos;</span>
+</code></pre>
+<p>&#x66FF;&#x6362;&#x6210;&#x6B63;&#x786E;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;    </p>
+<h2 id="&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;">&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;</h2>
+<p>&#x722C;&#x53D6;<a href="http://jinyong.zuopinj.com/" target="_blank">&#x91D1;&#x5EB8;&#x4F5C;&#x54C1;&#x96C6;</a><br>&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6539;&#x5199;&#x6846;&#x67B6;&#x4E2D;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5373;&#x53EF;&#x722C;&#x53D6;&#xFF1A;</p>
+<pre><code class="lang-python">base_url = <span class="hljs-string">&apos;&apos;</span>
+
+<span class="hljs-comment"># &#x9700;&#x8981;&#x722C;&#x53D6;&#x7684;url</span>
+urls = <span class="hljs-string">&apos;http://jinyong.zuopinj.com&apos;</span>
+
+<span class="hljs-comment"># &#x7F51;&#x7AD9;&#x7F16;&#x7801;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x90FD;&#x662F;utf-8&#x6216;gbk&#x7F16;&#x7801;</span>
+encoding_type = <span class="hljs-string">&apos;utf-8&apos;</span>
+
+<span class="hljs-comment"># &#x4E66;&#x540D;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x7528;&#x5728;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E66;&#x540D;&#x548C;&#x7AE0;&#x8282;&#x5217;&#x8868;&#x7684;&#x7F51;&#x9875;&#x540E;&#x7F00;</span>
+book_analytic = <span class="hljs-string">&apos;#cols-1 h3 a&apos;</span>
+
+<span class="hljs-comment"># &#x7AE0;&#x8282;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+
+chapter_analytic = <span class="hljs-string">&apos;.book_list a&apos;</span>
+
+<span class="hljs-comment"># &#x8BE6;&#x60C5;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+detail_analytic = <span class="hljs-string">&apos;#htmlContent p&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_response</span><span class="hljs-params">(url,encoding_type)</span>:</span>
+    header = {
+        <span class="hljs-string">&apos;user-agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&apos;</span>,
+    }
+    response = requests.get(url=url,headers=header)
+    response.encoding = encoding_type     
+    <span class="hljs-keyword">return</span> response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_name_and_link</span><span class="hljs-params">(base_url,url,item_dict,analytic,item_name,item_slug_name)</span>:</span>
+    response = get_response(url,encoding_type)
+    soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+    <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> soup.select(analytic):
+        item_dict[item_name] = each.text
+        item_dict[item_slug_name] = each[<span class="hljs-string">&apos;href&apos;</span>]
+        <span class="hljs-keyword">yield</span> item_dict
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_detail</span><span class="hljs-params">(item_dict,analytic)</span>:</span>
+    response = get_response(f<span class="hljs-string">&apos;{base_url}{item_dict[&quot;chapter_slug&quot;]}&apos;</span>,encoding_type)
+    soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+    content = soup.select(analytic)
+
+    book_name = item_dict[<span class="hljs-string">&apos;book_name&apos;</span>]
+    title = item_dict[<span class="hljs-string">&apos;chapter_name&apos;</span>]
+    <span class="hljs-keyword">with</span> open(f<span class="hljs-string">&apos;{book_name}.txt&apos;</span>,<span class="hljs-string">&apos;a&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)<span class="hljs-keyword">as</span> txt_file:
+    <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#xFF0C;&#x907F;&#x514D;&#x5199;&#x5165;&#x65F6;&#x4E71;&#x7801;</span>
+    <span class="hljs-comment"># &#x6BCF;&#x4E00;&#x6B21;&#x5199;&#x5165;&#x7AE0;&#x8282;&#x540D;&#x65F6;&#x8FDB;&#x884C;&#x6362;&#x884C;</span>
+        txt_file.write(<span class="hljs-string">&apos;\n&apos;</span>+title+<span class="hljs-string">&apos;\n&apos;</span>)
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> content:
+            txt_file.write(line.text + <span class="hljs-string">&apos;\n&apos;</span>)
+    print(f<span class="hljs-string">&apos;{ title } &#x5199;&#x5165;&#x5230;{ book_name }.txt &#x5B8C;&#x6210;&apos;</span>)
+
+<span class="hljs-comment"># &#x57FA;&#x7840;url &#x901A;&#x5E38;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x9047;&#x5230;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x7F51;&#x9875;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x57FA;&#x7840;url&#x8FDB;&#x884C;&#x62FC;&#x63A5;</span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x662F; &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84; &#x90A3;&#x5C31;&#x5199;&#x6210;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
+base_url = <span class="hljs-string">&apos;&apos;</span>
+
+<span class="hljs-comment"># &#x9700;&#x8981;&#x722C;&#x53D6;&#x7684;url</span>
+<span class="hljs-comment">#urls = &apos;http://jinyong.zuopinj.com&apos;</span>
+urls = <span class="hljs-string">&apos;http://gulong.zuopinj.com&apos;</span>
+<span class="hljs-comment"># &#x7F51;&#x7AD9;&#x7F16;&#x7801;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x90FD;&#x662F;utf-8&#x6216;gbk&#x7F16;&#x7801;</span>
+encoding_type = <span class="hljs-string">&apos;utf-8&apos;</span>
+
+<span class="hljs-comment"># &#x4E66;&#x540D;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x7528;&#x5728;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E66;&#x540D;&#x548C;&#x7AE0;&#x8282;&#x5217;&#x8868;&#x7684;&#x7F51;&#x9875;&#x540E;&#x7F00;</span>
+book_analytic = <span class="hljs-string">&apos;#cols-1 h3 a&apos;</span>
+
+<span class="hljs-comment"># &#x7AE0;&#x8282;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+
+chapter_analytic = <span class="hljs-string">&apos;.book_list a&apos;</span>
+
+<span class="hljs-comment"># &#x8BE6;&#x60C5;&#x5217;&#x8868;&#x89E3;&#x6790;&#x5F0F;</span>
+detail_analytic = <span class="hljs-string">&apos;#htmlContent p&apos;</span>      
+
+<span class="hljs-comment"># &#x4E3B;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    items = {}
+    book_list = get_name_and_link(base_url,urls,items,book_analytic,<span class="hljs-string">&apos;book_name&apos;</span>,<span class="hljs-string">&apos;book_slug&apos;</span>)
+    <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+        book_url = f<span class="hljs-string">&apos;{base_url}{each[&quot;book_slug&quot;]}&apos;</span>
+        chapter_dict = get_name_and_link(base_url,book_url,items,chapter_analytic,<span class="hljs-string">&apos;chapter_name&apos;</span>,<span class="hljs-string">&apos;chapter_slug&apos;</span>)
+        <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> chapter_dict:
+            get_detail(each,detail_analytic)
+main()
+</code></pre>
+<p>&#x563F;&#x563F;&#x563F;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x723D;&#xFF1F;<br>&#x4E00;&#x4E0B;&#x5B50;&#x83B7;&#x53D6;&#x5230;&#x4E86;15&#x672C;&#x5C0F;&#x8BF4;&#x3002;<br>&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x628A;&#x4E0A;&#x9762;&#x7684;urls&#x6539;&#x5199;&#x6210;<code>urls = &apos;http://gulong.zuopinj.com&apos;</code><br>&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x3002;<br>&#x563F;&#x563F;&#x563F;,80&#x672C;&#x5C0F;&#x8BF4;&#x5230;&#x624B;&#x3002;  </p>
+<h2 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h2>
+<p>&#x4E0D;&#x8981;&#x9AD8;&#x5174;&#x592A;&#x65E9;&#xFF0C;&#x5927;&#x5BB6;&#x6709;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;<br>&#x722C;&#x53D6;&#x6211;&#x5199;&#x7684;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#xFF0C;&#x800C;&#x73B0;&#x5728;&#x722C;&#x53D6;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x7684;&#x7F51;&#x7AD9;&#x5F88;&#x6162;&#x554A;&#xFF1F;&#xFF1F;<br>&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#xFF1F;<br>&#x56E0;&#x4E3A;&#x6211;&#x5199;&#x7684;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x672C;&#x5730;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x7684;&#x7F51;&#x7AD9;&#x662F;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x3002;<br>&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x722C;&#x53D6;&#x901F;&#x5EA6;&#x662F;&#x5728;&#x662F;&#x592A;&#x6162;&#x4E86;&#x3002;&#xFF08;&#x6211;&#x7684;&#x8FD9;&#x4E2A;&#x5C0F;&#x6846;&#x67B6;&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#xFF09;<br>&#x60F3;&#x8981;&#x66F4;&#x5FEB;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#x7B49;&#x6280;&#x672F;&#x6765;&#x8BA9;&#x722C;&#x866B;&#x4EE5;&#x66F4;&#x5FEB;&#x7684;&#x901F;&#x5EA6;&#x6765;&#x5FEB;&#x901F;&#x722C;&#x53D6;&#x6570;&#x636E;&#x3002;<br>&#x8FD9;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x8BDD;&#xFF0C;&#x81EA;&#x5DF1;&#x53BB;&#x8C37;&#x6B4C;&#x3002;  </p>
+<h2 id="&#x540E;&#x7EED;">&#x540E;&#x7EED;</h2>
+<p>&#x540E;&#x7EED;&#x5C06;&#x4ECB;&#x7ECD;scrapy&#x6846;&#x67B6;&#x3002;&#x656C;&#x8BF7;&#x671F;&#x5F85;&#x3002;<br>&#x73B0;&#x5728;&#x662F;2019&#x5E74;&#x7684;2&#x6708;8&#x53F7;&#x3002;<br>&#x4E0B;&#x4E00;&#x6B21;&#x7684;scrapy&#x6559;&#x5B66;&#x6CA1;&#x4EC0;&#x4E48;&#x610F;&#x5916;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x5728;2019&#x5E74;3&#x6708;&#x4EFD;&#x653E;&#x51FA;&#x3002;<br>&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x6709;&#x6240;&#x4E86;&#x89E3;&#x3002;<br>&#x6700;&#x597D;&#x662F;postgresql&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="demo_3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 函数化代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"三层结构小说网站爬取框架","level":"1.5.5","depth":2,"previous":{"title":"函数化代码","level":"1.5.4","depth":2,"path":"section_2/demo_3.md","ref":"section_2/demo_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section_2/demo_4.md","mtime":"2019-02-07T18:00:50.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-03T06:07:13.048Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

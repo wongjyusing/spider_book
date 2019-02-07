@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}首页{% end %}
+{% block title %}{{ book_data['chapter_name'] }}{% end %}
 
 {% block content %}
 <h4><a href="{{ reverse_url('chapter',book_data['book_slug'])  }}">{{ book_data['book_name'] }}</a></h4>
