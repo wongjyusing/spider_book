@@ -1,0 +1,709 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>bs4傻瓜教学 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="demo_3.html" />
+    
+    
+    <link rel="prev" href="demo_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../section_0/chapter_0.html">
+            
+                <a href="../section_0/chapter_0.html">
+            
+                    
+                    什么是爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../section_1/chapter_0.html">
+            
+                <a href="../section_1/chapter_0.html">
+            
+                    
+                    分析网页
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section_1/chapter_1.html">
+            
+                <a href="../section_1/chapter_1.html">
+            
+                    
+                    隐身窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section_1/chapter_2.html">
+            
+                <a href="../section_1/chapter_2.html">
+            
+                    
+                    网页源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../section_1/chapter_3.html">
+            
+                <a href="../section_1/chapter_3.html">
+            
+                    
+                    动态网页解析手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter_0.html">
+            
+                <a href="chapter_0.html">
+            
+                    
+                    学习方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter_1.html">
+            
+                <a href="chapter_1.html">
+            
+                    
+                    编写爬虫前的准备工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="demo_0.html">
+            
+                <a href="demo_0.html">
+            
+                    
+                    怎么写爬虫？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="demo_1.html">
+            
+                <a href="demo_1.html">
+            
+                    
+                    使用代码打开一个网页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="demo_2.html">
+            
+                <a href="demo_2.html">
+            
+                    
+                    bs4傻瓜教学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="demo_3.html">
+            
+                <a href="demo_3.html">
+            
+                    
+                    函数化代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="demo_4.html">
+            
+                <a href="demo_4.html">
+            
+                    
+                    三层结构小说网站爬取框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >bs4傻瓜教学</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="bs4&#x7684;&#x50BB;&#x74DC;&#x6559;&#x5B66;">bs4&#x7684;&#x50BB;&#x74DC;&#x6559;&#x5B66;</h2>
+<p>&#x73B0;&#x5728;&#x5927;&#x5BB6;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;<code>http://127.0.0.1:8000/</code>&#x7684;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x3002;<br>&#x6211;&#x4EEC;&#x7684;&#x5C0F;&#x8BF4;&#x94FE;&#x63A5;&#x7684;&#x6570;&#x636E;&#x662F;&#x600E;&#x6837;&#x7684;&#x683C;&#x5F0F;?<br><code>&lt;a href=&quot;/chapter/shen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;</code><br>&#x6570;&#x636E;&#x90FD;&#x662F;&#x5728;<strong>a</strong>&#x6807;&#x7B7E;&#x91CC;&#x9762;&#x3002;<br>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x89E3;&#x6790;&#x5F0F;&#x4E00;&#x5B9A;&#x6709;&#x4E2A;<code>a</code>&#x3002;<br>&#x5C1D;&#x8BD5;&#x8FD0;&#x884C;&#x4E0B;&#x65B9;&#x7684;&#x4EE3;&#x7801;&#x3002;  </p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BFC;&#x5165;python&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;requests</span>
+<span class="hljs-keyword">import</span> requests  
+<span class="hljs-comment"># &#x4F7F;&#x7528;reqursts&#x4E2D;&#x7684;get&#x65B9;&#x6CD5;&#x6253;&#x5F00; http://127.0.0.1:8000 &#x628A;&#x8BE5;&#x5BF9;&#x8C61;&#x547D;&#x540D;&#x4E3A;response</span>
+response = requests.get(<span class="hljs-string">&apos;http://127.0.0.1:8000/&apos;</span>)
+<span class="hljs-comment"># &#x4ECE;bs4 &#x4E2D;&#x5BFC;&#x5165; BeautifulSoup&#x65B9;&#x6CD5; &#x7B80;&#x5199;&#x4E3A;bs</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+<span class="hljs-comment"># &#x7172;&#x6C64;  &#x4F7F;&#x7528;BeautifulSoup&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801; &#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;lxml</span>
+soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528; &#x6C64; &#x4E2D;&#x7684;&#x9009;&#x62E9;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x7F51;&#x9875;&#x4E0A;a&#x6807;&#x7B7E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5199;&#x4E2A; a</span>
+book_list = soup.select(<span class="hljs-string">&apos;a&apos;</span>)
+<span class="hljs-comment"># &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x9010;&#x4E2A;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</span>
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+    print(each)
+</code></pre>
+<pre><code>&lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;&#x91D1;&#x5EB8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a class=&quot;nav-link&quot; href=&quot;/&quot;&gt;&#x9996;&#x9875; &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+&lt;a aria-expanded=&quot;false&quot; aria-haspopup=&quot;true&quot; class=&quot;nav-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; id=&quot;navbarDropdown&quot; role=&quot;button&quot;&gt;
+&#x5C0F;&#x8BF4;&#x7248;&#x672C;
+&lt;/a&gt;
+&lt;a class=&quot;dropdown-item&quot; href=&quot;/version/1&quot;&gt;&#x4FEE;&#x8BA2;&#x7248;&lt;/a&gt;
+&lt;a class=&quot;dropdown-item&quot; href=&quot;/version/2&quot;&gt;&#x65B0;&#x4FEE;&#x7248;&lt;/a&gt;
+&lt;a class=&quot;dropdown-item&quot; href=&quot;/version/3&quot;&gt;&#x65E7;&#x7248;&lt;/a&gt;
+&lt;a href=&quot;/chapter/shen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/bi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/bai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/lian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/shu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/she&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/fei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/tian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/lu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/ntian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nfei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nbi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nlu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nbai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshe&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nlian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/ofei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshe&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/olian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/otian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/olu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/obai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/obi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wongjyusing&quot;&gt;Sing&lt;/a&gt;
+&lt;a href=&quot;https://www.tornadoweb.org/en/stable&quot;&gt;Tornado&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wongjyusing&quot;&gt;
+&lt;b&gt;Sing&lt;/b&gt;
+&lt;/a&gt;
+</code></pre><p>&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x60AC;&#x5FF5;&#xFF0C;&#x4E0A;&#x9762;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;<br>&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#xFF1F;<br>&#x56E0;&#x4E3A;&#x8303;&#x56F4;&#x592A;&#x5927;&#x4E86;&#xFF0C;&#x800C;&#x89E3;&#x6790;&#x5F0F;&#x7684;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x592A;&#x5C11;&#x4E86;&#x3002;<br>&#x8BE5;&#x5982;&#x4F55;&#x6539;&#x8FDB;&#x5462;&#xFF1F;&#xFF1F;<br>&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x89C2;&#x5BDF;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x3002;<br>&#x770B;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x7684;a&#x6807;&#x7B7E;&#x5916;&#x9762;&#x7684;&#x6807;&#x7B7E;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#xFF1F;<br><code>&lt;th scope=&quot;row&quot;&gt;&lt;a href=&quot;/chapter/yi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;&lt;/th&gt;</code><br>&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#x662F;<strong>th</strong>&#x6807;&#x7B7E;&#x3002;<br>&#x4E8E;&#x662F;&#x4E4E;&#xFF0C;&#x52A0;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x89E3;&#x6790;&#x5F0F;&#x6539;&#x5199;&#x6210;<code>th a</code><br>&#x5C1D;&#x8BD5;&#x6267;&#x884C;&#x4E0B;&#x65B9;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BFC;&#x5165;python&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;requests</span>
+<span class="hljs-keyword">import</span> requests  
+<span class="hljs-comment"># &#x4F7F;&#x7528;reqursts&#x4E2D;&#x7684;get&#x65B9;&#x6CD5;&#x6253;&#x5F00; http://127.0.0.1:8000 &#x628A;&#x8BE5;&#x5BF9;&#x8C61;&#x547D;&#x540D;&#x4E3A;response</span>
+response = requests.get(<span class="hljs-string">&apos;http://127.0.0.1:8000/&apos;</span>)
+<span class="hljs-comment"># &#x4ECE;bs4 &#x4E2D;&#x5BFC;&#x5165; BeautifulSoup&#x65B9;&#x6CD5; &#x7B80;&#x5199;&#x4E3A;bs</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+<span class="hljs-comment"># &#x7172;&#x6C64;  &#x4F7F;&#x7528;BeautifulSoup&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801; &#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;lxml</span>
+soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528; &#x6C64; &#x4E2D;&#x7684;&#x9009;&#x62E9;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x7F51;&#x9875;&#x4E0A;a&#x6807;&#x7B7E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5199;&#x4E2A; a  </span>
+<span class="hljs-comment"># &#x7531;&#x4E8E;&#x76F4;&#x63A5;&#x586B;&#x5199;a&#x6807;&#x7B7E;&#x4F1A;&#x5BFC;&#x81F4;&#x5F88;&#x591A;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-comment"># &#x6545;&#x6B64;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6; &#x83B7;&#x53D6; th&#x6807;&#x7B7E;&#x4E2D;&#x7684;a&#x6807;&#x7B7E;&#x3002;</span>
+book_list = soup.select(<span class="hljs-string">&apos;th a&apos;</span>)
+<span class="hljs-comment"># &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x9010;&#x4E2A;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</span>
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+    print(each)
+</code></pre>
+<pre><code>&lt;a href=&quot;/chapter/shen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/bi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/bai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/lian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/shu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/yue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/xue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/she&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/fei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/tian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/lu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/ntian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nfei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nbi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nlu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nbai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshe&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nxue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nyi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nshen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/nlian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/ofei&quot;&gt;&#x98DE;&#x72D0;&#x5916;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxia&quot;&gt;&#x4FA0;&#x5BA2;&#x884C;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshe&quot;&gt;&#x5C04;&#x96D5;&#x82F1;&#x96C4;&#x4F20;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/olian&quot;&gt;&#x8FDE;&#x57CE;&#x8BC0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/otian&quot;&gt;&#x5929;&#x9F99;&#x516B;&#x90E8;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshu&quot;&gt;&#x4E66;&#x5251;&#x6069;&#x4EC7;&#x5F55;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/olu&quot;&gt;&#x9E7F;&#x9F0E;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyuan&quot;&gt;&#x9E33;&#x9E2F;&#x5200;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/obai&quot;&gt;&#x767D;&#x9A6C;&#x5578;&#x897F;&#x98CE;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/obi&quot;&gt;&#x78A7;&#x8840;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyi&quot;&gt;&#x501A;&#x5929;&#x5C60;&#x9F99;&#x8BB0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oshen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxue&quot;&gt;&#x96EA;&#x5C71;&#x98DE;&#x72D0;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oxiao&quot;&gt;&#x7B11;&#x50B2;&#x6C5F;&#x6E56;&#x5C0F;&#x8BF4;&lt;/a&gt;
+&lt;a href=&quot;/chapter/oyue&quot;&gt;&#x8D8A;&#x5973;&#x5251;&#x5C0F;&#x8BF4;&lt;/a&gt;
+</code></pre><p>&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x6B63;&#x786E;&#x3002;  </p>
+<h2 id="&#x63D0;&#x5347;&#x80FD;&#x529B;">&#x63D0;&#x5347;&#x80FD;&#x529B;</h2>
+<p>bs4&#x633A;&#x7B80;&#x5355;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5927;&#x5BB6;&#x9700;&#x8981;&#x5B66;&#x591A;&#x51E0;&#x79CD;&#x8BED;&#x6CD5;&#x6765;&#x786E;&#x4FDD;&#x4EE5;&#x540E;&#x9047;&#x5230;&#x771F;&#x6B63;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x4E0D;&#x4F1A;&#x8BF4;&#x7684;&#x5230;&#x592A;&#x591A;&#x7684;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x3002;<br>&#x9996;&#x5148;&#xFF0C;bs4&#x662F;&#x5C5E;&#x4E8E;<strong>css&#x9009;&#x62E9;&#x5668;</strong>&#x89E3;&#x6790;&#x5668;&#x3002;<br>&#x8FD9;&#x91CC;&#x6709;&#x4E09;&#x79CD;&#x57FA;&#x672C;&#x5143;&#x7D20;&#x8981;&#x4E86;&#x89E3;&#xFF1A;<strong>&#x6807;&#x7B7E;&#xFF0C;class&#x3001;id&#x3001;&#x5C5E;&#x6027;</strong>  </p>
+<h3 id="&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;">&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</h3>
+<p>&#x73B0;&#x5728;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x5230;&#x5C0F;&#x8BF4;&#x7684;&#x7248;&#x672C;&#x540D;&#xFF0C;&#x548C;&#x7248;&#x672C;&#x4ECB;&#x7ECD;&#xFF08;&#x7EA2;&#x5B57;&#x90E8;&#x5206;&#xFF09;  </p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;version-name&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x4FEE;&#x8BA2;&#x7248;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">font</span>&gt;</span>&#x4FEE;&#x8BA2;&#x7248;,&#x4E5F;&#x79F0;&#x65B0;&#x7248;,&#x4E09;&#x8054;&#x7248;,&#x6D41;&#x4F20;&#x6700;&#x5E7F;,&#x9996;&#x6B21;&#x9605;&#x8BFB;&#x63A8;&#x8350;&#x9605;&#x8BFB;&#x6B64;&#x7248;&#x672C;<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x7F51;&#x9875;&#x4E0A;&#x6709;&#x5F88;&#x591A;&#x4E2A;h3&#x6807;&#x7B7E;&#xFF08;&#x592A;&#x61D2;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;demo&#x6CA1;&#x505A;&#x592A;&#x591A;&#x7684;&#x6DF7;&#x6DC6;&#x5185;&#x5BB9;&#xFF09;<br>&#x89E3;&#x6790;&#x5F0F;<code>h3 font</code>&#x548C;<code>h3 span</code>&#x65E0;&#x6CD5;&#x4F7F;&#x7528;<br>&#x8BE5;&#x600E;&#x4E48;&#x5199;&#x5462;&#xFF1F;&#xFF1F;
+&#x5199;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BFC;&#x5165;python&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;requests</span>
+<span class="hljs-keyword">import</span> requests  
+<span class="hljs-comment"># &#x4F7F;&#x7528;reqursts&#x4E2D;&#x7684;get&#x65B9;&#x6CD5;&#x6253;&#x5F00; http://127.0.0.1:8000 &#x628A;&#x8BE5;&#x5BF9;&#x8C61;&#x547D;&#x540D;&#x4E3A;response</span>
+response = requests.get(<span class="hljs-string">&apos;http://127.0.0.1:8000/&apos;</span>)
+<span class="hljs-comment"># &#x4ECE;bs4 &#x4E2D;&#x5BFC;&#x5165; BeautifulSoup&#x65B9;&#x6CD5; &#x7B80;&#x5199;&#x4E3A;bs</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+<span class="hljs-comment"># &#x7172;&#x6C64;  &#x4F7F;&#x7528;BeautifulSoup&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801; &#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;lxml</span>
+soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;bs4&#x4E2D;&#x7684;css&#x9009;&#x62E9;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x6240;&#x6709;class=version-name&#x7684;&#x5185;&#x5BB9;</span>
+<span class="hljs-comment"># &#x5728;css&#x4E2D;&#xFF0C;class&#x662F;&#x7528;&#x53E5;&#x53F7; &#x70B9; . &#x6765;&#x8868;&#x793A;</span>
+<span class="hljs-comment"># &#x5728;css&#x4E2D;  id &#x662F;&#x7528;&#x4E95;&#x53F7;&#x6765;&#x8868;&#x793A; #</span>
+book_versions = soup.select(<span class="hljs-string">&apos;.version-name&apos;</span>)
+<span class="hljs-comment"># &#x9010;&#x6B65;&#x6253;&#x5370;&#x5185;&#x5BB9;&#xFF0C;&#x6765;&#x786E;&#x8BA4;&#x6211;&#x4EEC;&#x7684;&#x89E3;&#x6790;&#x5F0F;&#x662F;&#x5426;&#x5199;&#x5BF9;</span>
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_versions:
+    <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x65B9;&#x6CD5; select_one()</span>
+    <span class="hljs-comment"># &#x7531;&#x4E8E;&#x53EF;&#x4EE5;&#x786E;&#x8BA4;&#xFF0C;&#x5728;.version-name&#x91CC;&#x9762;&#x7684;font&#x6807;&#x7B7E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;</span>
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;select()&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># &#x5230;&#x65F6;&#x5019;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x8981;&#x5199;&#x6210;version_name = each.select(&apos;font&apos;)[0].text</span>
+    <span class="hljs-comment"># select_one() &#x53EA;&#x4F1A;&#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x89E3;&#x6790;&#x5F0F;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-comment"># &#x4E3A;&#x4E86;&#x4F18;&#x5316;&#x4EE3;&#x7801;&#xFF0C;&#x9009;&#x62E9;select_one()&#x65B9;&#x6CD5;</span>
+    version_name = each.select_one(<span class="hljs-string">&apos;font&apos;</span>).text
+    version_introduction = each.select_one(<span class="hljs-string">&apos;span&apos;</span>).text
+    print(version_name,version_introduction)
+</code></pre>
+<pre><code>&#x4FEE;&#x8BA2;&#x7248;,&#x4E5F;&#x79F0;&#x65B0;&#x7248;,&#x4E09;&#x8054;&#x7248;,&#x6D41;&#x4F20;&#x6700;&#x5E7F;,&#x9996;&#x6B21;&#x9605;&#x8BFB;&#x63A8;&#x8350;&#x9605;&#x8BFB;&#x6B64;&#x7248;&#x672C; &#x4FEE;&#x8BA2;&#x7248;
+&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x7248;&#xFF0C;&#x65B0;&#x4FEE;&#x7248;&#xFF0C;&#x7531;&#x5E7F;&#x5DDE;&#x51FA;&#x7248;&#x793E;&#x548C;&#x82B1;&#x57CE;&#x51FA;&#x7248;&#x793E;&#x8054;&#x5408;&#x51FA;&#x7248; &#x65B0;&#x4FEE;&#x7248;
+&#x6700;&#x521D;&#x7684;&#x6717;&#x58F0;&#x65E7;&#x7248; &#x62A5;&#x7EB8;&#x8FDE;&#x8F7D;&#x7248; &#x65E7;&#x7248;
+</code></pre><h3 id="&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;">&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;</h3>
+<p>&#x56DE;&#x5230;&#x6211;&#x4EEC;&#x6700;&#x521D;&#x7684;&#x76EE;&#x6807;&#x3002;<br>&#x83B7;&#x53D6;&#x9996;&#x9875;&#x4E2D;&#x5C0F;&#x8BF4;&#x7684;&#x94FE;&#x63A5;&#x548C;&#x4E66;&#x540D;&#x3002;<br>&#x73B0;&#x5728;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x7684;&#x89E3;&#x6790;&#x5F0F;<code>th a</code> &#x4E0D;&#x80FD;&#x7528;&#x3002;(&#x5047;&#x8BBE;&#x6709;&#x7F51;&#x9875;&#x4E0A;&#x6709;&#x5F88;&#x591A;&#xFF0C;th&#x6807;&#x7B7E;&#x6DF7;&#x6DC6;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;th&#x6807;&#x7B7E;)<br>&#x90A3;&#x8BE5;&#x600E;&#x4E48;&#x7CBE;&#x51C6;&#x7684;&#x83B7;&#x53D6;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#x5462;&#xFF1F;&#xFF1F;<br>&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#xFF0C;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/chapter/shen&quot;</span>&gt;</span>&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;<strong>&#x5C5E;&#x6027;&#x5199;&#x6CD5;&#x4E86;</strong><br>&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;  </p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BFC;&#x5165;python&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;requests</span>
+<span class="hljs-keyword">import</span> requests  
+<span class="hljs-comment"># &#x4F7F;&#x7528;reqursts&#x4E2D;&#x7684;get&#x65B9;&#x6CD5;&#x6253;&#x5F00; http://127.0.0.1:8000 &#x628A;&#x8BE5;&#x5BF9;&#x8C61;&#x547D;&#x540D;&#x4E3A;response</span>
+response = requests.get(<span class="hljs-string">&apos;http://127.0.0.1:8000/&apos;</span>)
+<span class="hljs-comment"># &#x4ECE;bs4 &#x4E2D;&#x5BFC;&#x5165; BeautifulSoup&#x65B9;&#x6CD5; &#x7B80;&#x5199;&#x4E3A;bs</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+<span class="hljs-comment"># &#x7172;&#x6C64;  &#x4F7F;&#x7528;BeautifulSoup&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801; &#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;lxml</span>
+soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x89E3;&#x6790;&#x5F0F;&#x6765;&#x83B7;&#x53D6;&#x5185;&#x5BB9;</span>
+<span class="hljs-comment"># &#x5199;&#x6CD5;&#x7684;&#x8981;&#x70B9;&#xFF1A;</span>
+    <span class="hljs-comment"># &#x9996;&#x5148;a&#x6807;&#x7B7E;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x6709; &#x5F97;&#x51FA; &apos;a&apos;  </span>
+    <span class="hljs-comment"># &#x7136;&#x540E;&#x5199;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x8868;&#x793A;&#x65B9;&#x5F0F;  &#x5F97;&#x51FA;&apos;[] a&apos;</span>
+    <span class="hljs-comment"># &#x5199;&#x4E0A;&#x5C5E;&#x6027;&#x540D;  &#x5F97;&#x51FA;&apos;[scope] a&apos;</span>
+    <span class="hljs-comment"># &#x5199;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x5185;&#x5BB9; &#x5F97;&#x51FA;&apos;[scope=row] a&apos;</span>
+book_list = soup.select(<span class="hljs-string">&apos;[scope=row] a&apos;</span>)
+<span class="hljs-comment"># &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x9010;&#x4E2A;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</span>
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+    print(each.text,each[<span class="hljs-string">&apos;href&apos;</span>])
+</code></pre>
+<h3 id="&#x7B2C;&#x4E09;&#x4E2A;&#x4F8B;&#x5B50;">&#x7B2C;&#x4E09;&#x4E2A;&#x4F8B;&#x5B50;</h3>
+<p>&#x76F4;&#x63A5;&#x9605;&#x8BFB;&#x4E0B;&#x9762;&#x7684;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/chapter/shen&quot;</span>&gt;</span>&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/novel/smallleeflyknife&quot;</span>&gt;</span>&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/txt/shen&quot;</span>&gt;</span>&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x65F6;&#x6709;&#x53D1;&#x751F;&#x3002;<br>&#x7F51;&#x7AD9;&#x4E3A;&#x4E86;&#x53CD;&#x722C;&#x7ECF;&#x5E38;&#x4F1A;&#x4F7F;&#x7528;js&#x6765;&#x52A0;&#x8F7D;&#x771F;&#x6B63;&#x7684;&#x6570;&#x636E;&#x3002;<br>&#x800C;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x4F1A;&#x6DF7;&#x6DC6;&#x5F88;&#x591A;&#x7684;&#x5047;&#x6570;&#x636E;&#x3002;<br>&#x5982;&#x540C;&#x7B2C;&#x4E8C;&#x4E2A;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#xFF0C;small&#x3001;lee&#x3001;fly&#x3001;knife&#xFF0C;&#x5C0F;&#x674E;&#x98DE;&#x5200;&#x90FD;&#x6709;&#x3002;<br>&#x8FD9;&#x4E2A;&#x771F;&#x7684;&#x53EF;&#x6015;&#x3002;<br>&#x8FD9;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x5230;&#x771F;&#x6B63;&#x7684;&#x7AE0;&#x8282;&#x94FE;&#x63A5;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#xFF1F;<br>&#x9996;&#x5148;&#x786E;&#x8BA4;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x662F;<code>/chapter/shen</code>&#x7684;&#x5F62;&#x5F0F;&#x3002;  </p>
+<pre><code class="lang-python">response_text = <span class="hljs-string">&quot;&quot;&quot;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;&lt;a href=&quot;/chapter/shen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;&lt;/th&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;&lt;/td&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;&lt;a href=&quot;/novel/smallleeflyknife&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;&lt;/th&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;&lt;/td&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;&lt;a href=&quot;/txt/shen&quot;&gt;&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4;&lt;/a&gt;&lt;/th&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x65F6;&#x95F4;&#xFF1A;1980&#x5E74;&lt;/td&gt;
+&lt;td&gt;&#x51FA;&#x7248;&#x793E;&#xFF1A;&#x4E09;&#x8054;&#x51FA;&#x7248;&#x793E;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+
+                &quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+<span class="hljs-comment"># &#x7172;&#x6C64;  &#x4F7F;&#x7528;BeautifulSoup&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801; &#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;lxml</span>
+soup = bs(response_text,<span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x89E3;&#x6790;&#x5F0F;&#x6765;&#x83B7;&#x53D6;&#x5185;&#x5BB9;</span>
+<span class="hljs-comment"># &#x5199;&#x6CD5;&#x7684;&#x8981;&#x70B9;&#xFF1A;</span>
+    <span class="hljs-comment"># &#x5199;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x8868;&#x793A;&#x65B9;&#x5F0F;  &#x5F97;&#x51FA;&apos;[]&apos;</span>
+    <span class="hljs-comment"># &#x5199;&#x4E0A;&#x5C5E;&#x6027;&#x540D;  &#x5F97;&#x51FA;&apos;[href]&apos;</span>
+    <span class="hljs-comment"># &#x7531;&#x4E8E;&#x662F;&#x9700;&#x8981;&#x4EE5;chapter&#x5F00;&#x5934; &#x5C0F;&#x8BF4;&#x540D;&#x5B57;&#x62FC;&#x97F3;&#x7ED3;&#x675F;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5F97;&#x51FA; [href^=&quot;/chapter/&quot;]</span>
+    <span class="hljs-comment"># href^ &#x8FD9;&#x79CD;&#x5C5E;&#x4E8E;&#x662F;bs4&#x4E2D;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7528;&#x6CD5;</span>
+
+    <span class="hljs-comment"># &#x5728;&#x8FD9;&#x91CC;href^=&quot;/chapter/&quot;  &#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4EE5;/chapter/&#x5F00;&#x5934;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-comment"># &#x5728;&#x8FD9;&#x91CC;href$=&quot;shen&quot;  &#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4EE5; shen &#x7ED3;&#x675F;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-comment"># &#x5728;&#x8FD9;&#x91CC;href*=&quot;txt&quot;  &#x5339;&#x914D;&#x542B;&#x6709; txt &#x7684;&#x6570;&#x636E;</span>
+
+    <span class="hljs-comment"># &#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x66FF;&#x6362;&#x4E00;&#x4E0B; &#x4E0B;&#x9762;&#x7684;&#x89E3;&#x6790;&#x5F0F; &#x611F;&#x53D7;&#x4E00;&#x4E0B;</span>
+
+book_list = soup.select(<span class="hljs-string">&apos;[href^=&quot;/chapter/&quot;]&apos;</span>)
+<span class="hljs-comment"># &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x9010;&#x4E2A;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</span>
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> book_list:
+    print(each.text,each[<span class="hljs-string">&apos;href&apos;</span>])
+</code></pre>
+<pre><code>&#x795E;&#x96D5;&#x4FA0;&#x4FA3;&#x5C0F;&#x8BF4; /chapter/shen
+</code></pre><h2 id="&#x8FDB;&#x9636;">&#x8FDB;&#x9636;</h2>
+<p>&#x5B66;&#x4E60;bs4&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6700;&#x597D;&#x662F;&#x76F4;&#x63A5;&#x9605;&#x8BFB;<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors" target="_blank">bs4&#x7684;&#x5B98;&#x65B9;&#x6587;&#x6863;</a><br>&#x9664;&#x4E86;&#x5B66;&#x4E60;bs4 &#x8FD8;&#x9700;&#x8981;&#x5B66;&#x4E60;&#x5176;&#x4ED6;&#x89E3;&#x6790;&#x65B9;&#x6CD5;&#x3002;<br>&#x6CA1;&#x6709;&#x6700;&#x597D;&#x7684;&#x89E3;&#x6790;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x9002;&#x5408;&#x7684;&#x89E3;&#x6790;&#x65B9;&#x6CD5;&#x3002;<br>&#x6211;&#x8FD9;&#x91CC;&#x8BF4;&#x4E00;&#x4E2A;bs4&#x7684;&#x7F3A;&#x70B9;&#x5427;&#x3002;<br>&#x5982;&#x679C;&#x4F60;&#x9047;&#x5230;&#x7684;&#x7F51;&#x7AD9;&#x662F;<strong>gbk</strong>&#x7F16;&#x7801;&#x7684;&#x8BDD;&#xFF0C;&#x7EDD;&#x5BF9;&#x4E0D;&#x8981;&#x4F7F;&#x7528;bs4&#x6765;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x7F51;&#x9875;&#x3002;<br>&#x5F88;&#x5927;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x77ED;&#x65A4;&#x7F3A;&#x4E24;&#x7684;&#x73B0;&#x8C61;&#x3002;<br>&#x539F;&#x56E0;&#x662F;&#x4E00;&#x4E9B;&#x7F16;&#x7801;&#x95EE;&#x9898;&#xFF0C;<code>\u3000</code>&#x4E4B;&#x7C7B;&#x5BFC;&#x81F4;&#x7684;&#x3002;  </p>
+<p>&#x5728;&#x5408;&#x9002;&#x7684;&#x73AF;&#x5883;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x7F51;&#x9875;&#x89E3;&#x6790;&#x65B9;&#x6CD5;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x3002;<br>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x5C06;&#x6F14;&#x793A;&#x4F7F;&#x7528;pandas&#x83B7;&#x53D6;<a href="http://127.0.0.1:8000/" target="_blank">127.0.0.1:8000/</a>&#x4E0A;&#x7684;&#x5C0F;&#x8BF4;&#x6570;&#x636E;&#x3002;<br>&#x4EFB;&#x52A1;&#x9700;&#x6C42;&#xFF1A;
+&#x628A;&#x9996;&#x9875;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6211;&#x4EEC;python&#x4E2D;&#x7684;&#x5B57;&#x5178;&#x3002;<br>&#x8981;&#x6C42;&#xFF1A;
+&#x6839;&#x636E;&#x7248;&#x672C;&#x53F7;&#x628A;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x6574;&#x5408;&#x6210;&#x4E00;&#x4E2A;<strong>&#x5927;&#x5B57;&#x5178;</strong>&#x3002;<br>&#x5177;&#x4F53;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x3002;  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> requests  
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup <span class="hljs-keyword">as</span> bs
+response = requests.get(<span class="hljs-string">&apos;http://127.0.0.1:8000/&apos;</span>)
+
+soup = bs(response.text,<span class="hljs-string">&apos;lxml&apos;</span>)
+version_dict = {}
+version_index = <span class="hljs-number">0</span>
+version_content = soup.select(<span class="hljs-string">&apos;.version-content&apos;</span>)
+<span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> version_content:
+    version_name = each.select_one(<span class="hljs-string">&apos;h3 span&apos;</span>).text
+    version_introduction = each.select_one(<span class="hljs-string">&apos;h3 font&apos;</span>).text
+    novel_data = pd.read_html(response.text)[version_index]
+    novel_dict = novel_data.to_dict(orient=<span class="hljs-string">&apos;index&apos;</span>)
+    books = version_content[version_index].select(<span class="hljs-string">&apos;th a&apos;</span>)
+    book_count = len(books)
+    <span class="hljs-keyword">for</span> book_num <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,book_count):
+        novel_dict[book_num][<span class="hljs-string">&apos;&#x7F51;&#x9875;&#x94FE;&#x63A5;&apos;</span>] = books[book_num][<span class="hljs-string">&apos;href&apos;</span>]
+        <span class="hljs-comment">#print(books[book_num][&apos;href&apos;])</span>
+    novel_dict
+    version_dict[version_index] = {<span class="hljs-string">&apos;&#x7248;&#x672C;&#x540D;&apos;</span>:version_name,<span class="hljs-string">&apos;&#x7248;&#x672C;&#x4ECB;&#x7ECD;&apos;</span>:version_introduction,<span class="hljs-string">&apos;&#x5C0F;&#x8BF4;&#x5217;&#x8868;&apos;</span>:novel_dict}
+    version_index+=<span class="hljs-number">1</span>
+print(version_dict)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x5B57;&#x5178;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x8D44;&#x6599;&#x7684;&#x8C03;&#x7528;&#x3002;<br>&#x4E0A;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#x6211;&#x5C31;&#x5220;&#x6389;&#x4E86;&#x3002;<br>&#x4EE5;&#x540E;&#x5927;&#x5BB6;&#x7B49;&#x80FD;&#x529B;&#x63D0;&#x9AD8;&#x540E;&#xFF0C;&#x518D;&#x5199;&#x4E0A;&#x53BB;&#x3002;<br>&#x6211;&#x6F14;&#x793A;pandas&#x7684;&#x7528;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;pandas&#x5F88;&#x5F3A;&#x3002;<br>&#x53EA;&#x662F;&#x60F3;&#x544A;&#x8BC9;&#x5927;&#x5BB6;&#xFF0C;&#x6BCF;&#x4E00;&#x79CD;&#x89E3;&#x6790;&#x5668;&#x90FD;&#x8981;&#x5B66;&#xFF0C;&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x89E3;&#x6790;&#x5668;&#x3002;<br>&#x751A;&#x81F3;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x6216;&#x5DE5;&#x5177;&#x6765;&#x8F85;&#x52A9;&#x722C;&#x866B;&#x83B7;&#x53D6;&#x4FE1;&#x606F;&#x3002;<br>&#x6709;&#x673A;&#x4F1A;&#xFF0C;&#x6211;&#x4F1A;&#x505A;&#x4E00;&#x4E9B;&#x66F4;&#x590D;&#x6742;&#x7684;&#x7F51;&#x7AD9;&#x7ED9;&#x5927;&#x5BB6;&#x8FDB;&#x884C;&#x7EC3;&#x4E60;&#xFF0C;&#x5F3A;&#x8FEB;&#x5927;&#x5BB6;&#x4F7F;&#x7528;&#x66F4;&#x591A;&#x7684;&#x65B9;&#x6CD5;&#x3001;&#x8BED;&#x8A00;&#x6765;&#x5B9E;&#x73B0;&#x722C;&#x53D6;&#x3002;  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="demo_1.html" class="navigation navigation-prev " aria-label="Previous page: 使用代码打开一个网页">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="demo_3.html" class="navigation navigation-next " aria-label="Next page: 函数化代码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"bs4傻瓜教学","level":"1.5.3","depth":2,"next":{"title":"函数化代码","level":"1.5.4","depth":2,"path":"section_2/demo_3.md","ref":"section_2/demo_3.md","articles":[]},"previous":{"title":"使用代码打开一个网页","level":"1.5.2","depth":2,"path":"section_2/demo_1.md","ref":"section_2/demo_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section_2/demo_2.md","mtime":"2019-02-07T17:51:47.410Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-03T06:07:13.048Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
