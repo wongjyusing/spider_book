@@ -175,8 +175,8 @@ def get_detail(item_dict,analytic):
 base_url = ''
 
 # 需要爬取的url
-#urls = 'http://jinyong.zuopinj.com'
-urls = 'http://gulong.zuopinj.com'
+urls = 'http://jinyong.zuopinj.com'
+
 # 网站编码，大多数中文网站都是utf-8或gbk编码
 encoding_type = 'utf-8'
 

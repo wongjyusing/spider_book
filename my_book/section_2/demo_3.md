@@ -52,7 +52,7 @@ def get_response(url,encoding_type):
     header = {
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
     }
-    response = requests.get(url=url,header=header)
+    response = requests.get(url=url,headers=header)
     response.encoding = encoding_type     
     return response
 
@@ -94,9 +94,9 @@ def get_detail(item_dict,analytic):
     with open(f'{book_name}.txt','a',encoding='utf-8')as txt_file:
     #设置文件编码，避免写入时乱码
     # 每一次写入章节名时进行换行
-    txt_file.write('\n'+title+'\n')
-    for line in content:
-        txt_file.write(line.text)
+      txt_file.write('\n'+title+'\n')
+      for line in content:
+          txt_file.write(line.text + '\n')
     print(f'{ title } 写入到{ book_name }.txt 完成')
 
 ```
