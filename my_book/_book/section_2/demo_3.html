@@ -340,7 +340,7 @@ book_list = soup.select(<span class="hljs-string">&apos;th a&apos;</span>)
     header = {
         <span class="hljs-string">&apos;user-agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36&apos;</span>,
     }
-    response = requests.get(url=url,header=header)
+    response = requests.get(url=url,headers=header)
     response.encoding = encoding_type     
     <span class="hljs-keyword">return</span> response
 </code></pre>
@@ -370,11 +370,10 @@ book_list = soup.select(<span class="hljs-string">&apos;th a&apos;</span>)
     book_name = item_dict[<span class="hljs-string">&apos;book_name&apos;</span>]
     title = item_dict[<span class="hljs-string">&apos;chapter_name&apos;</span>]
     <span class="hljs-keyword">with</span> open(f<span class="hljs-string">&apos;{book_name}.txt&apos;</span>,<span class="hljs-string">&apos;a&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)<span class="hljs-keyword">as</span> txt_file:
-    <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#xFF0C;&#x907F;&#x514D;&#x5199;&#x5165;&#x65F6;&#x4E71;&#x7801;</span>
-    <span class="hljs-comment"># &#x6BCF;&#x4E00;&#x6B21;&#x5199;&#x5165;&#x7AE0;&#x8282;&#x540D;&#x65F6;&#x8FDB;&#x884C;&#x6362;&#x884C;</span>
-    txt_file.write(<span class="hljs-string">&apos;\n&apos;</span>+title+<span class="hljs-string">&apos;\n&apos;</span>)
-    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> content:
-        txt_file.write(line.text)
+
+      txt_file.write(<span class="hljs-string">&apos;\n&apos;</span>+title+<span class="hljs-string">&apos;\n&apos;</span>)
+      <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> content:
+          txt_file.write(line.text + <span class="hljs-string">&apos;\n&apos;</span>)
     print(f<span class="hljs-string">&apos;{ title } &#x5199;&#x5165;&#x5230;{ book_name }.txt &#x5B8C;&#x6210;&apos;</span>)
 </code></pre>
 
@@ -420,7 +419,7 @@ book_list = soup.select(<span class="hljs-string">&apos;th a&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"函数化代码","level":"1.5.4","depth":2,"next":{"title":"三层结构小说网站爬取框架","level":"1.5.5","depth":2,"path":"section_2/demo_4.md","ref":"section_2/demo_4.md","articles":[]},"previous":{"title":"bs4傻瓜教学","level":"1.5.3","depth":2,"path":"section_2/demo_2.md","ref":"section_2/demo_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section_2/demo_3.md","mtime":"2019-02-07T17:55:01.840Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-03T06:07:13.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"函数化代码","level":"1.5.4","depth":2,"next":{"title":"三层结构小说网站爬取框架","level":"1.5.5","depth":2,"path":"section_2/demo_4.md","ref":"section_2/demo_4.md","articles":[]},"previous":{"title":"bs4傻瓜教学","level":"1.5.3","depth":2,"path":"section_2/demo_2.md","ref":"section_2/demo_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section_2/demo_3.md","mtime":"2019-02-08T03:00:33.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-08T03:08:47.707Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

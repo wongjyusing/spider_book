@@ -92,8 +92,7 @@ def get_detail(item_dict,analytic):
     book_name = item_dict['book_name']
     title = item_dict['chapter_name']
     with open(f'{book_name}.txt','a',encoding='utf-8')as txt_file:
-    #设置文件编码，避免写入时乱码
-    # 每一次写入章节名时进行换行
+
       txt_file.write('\n'+title+'\n')
       for line in content:
           txt_file.write(line.text + '\n')
