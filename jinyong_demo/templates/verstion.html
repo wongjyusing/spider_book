@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ context['version_name'] }}{% end %}
+
+{% block content %}
+<div class="data-my-content">
+
+  <div class="version-content">
+    <h3 class="version-name"><span>{{ context['version_name'] }}</span>
+      <font>{{ context['version_info'] }}</font>
+    </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">书名</th>
+          <th scope="col">年份</th>
+          <th scope="col">出版社</th>
+        </tr>
+      </thead>
+      {% for book in book_data %}
+      <tbody>
+        <tr>
+
+          <th scope="row"><a href="{{ reverse_url('chapter',book)  }}">{{ book_data[book]['book_name'] }}</a></th>
+          <td>{{ book_data[book]['book_time'] }}</td>
+          <td>{{ book_data[book]['book_info'] }}</td>
+        </tr>
+
+      </tbody>
+      {% end %}
+    </table>
+  </div>
+
+</div>
+{% end %}

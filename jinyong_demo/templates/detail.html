@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book_data['chapter_name'] }}{% end %}
+
+{% block content %}
+<h4><a href="{{ reverse_url('chapter',book_data['book_slug'])  }}">{{ book_data['book_name'] }}</a></h4>
+<div class="data-my-content">
+  <h2 class="chapter-name">{{ book_data['chapter_name'] }}</h2>
+  <div class="detail-content">
+    {% for each in context %}
+
+      <p>{{ context[each] }}</p>
+    {% end %}
+
+  </div>
+</div>
+{% end %}
